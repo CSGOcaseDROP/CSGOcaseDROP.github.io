@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<!-- @include "meta.kit" -->
+		<title>CSGOLuck | Anubis Case</title>
+		<!-- @include "link.kit" -->
+	</head>
+	<body>
+		<!-- @include "nav.kit" -->
+		<div class="casebox" data-aos="fade-in" data-aos-duration="500" data-aos-once="true">
+			<div class="casebox__caseimg">
+				<img
+					class="casebox__caseimg-img"
+					src="./dist/img/anubis/case.png"
+					alt="Anubis Case"
+				/>
+			</div>
+			<div class="casebox-arrows">
+				<div class="casebox-arrows-arrow casebox-arrows-arrow--down">
+					<i class="casebox-arrow-down-icon fa-solid fa-arrow-down"></i>
+				</div>
+				<div class="casebox-arrows-arrow casebox-arrows-arrow--up">
+					<i class="casebox-arrow-up-icon fa-solid fa-arrow-up"></i>
+				</div>
+			</div>
+			<ul class="case"></ul>
+		</div>
+		<div class="open-btn-box" data-aos="fade-in" data-aos-duration="500" data-aos-once="true">
+			<button class="open-btn">
+				open
+				<img
+					class="open-btn-icon"
+					src="./dist/img/other/coin.png"
+					alt="Coin Icon"
+				/>
+				<p class="open-btn-amount">5.00</p>
+			</button>
+			<button class="open-btn open-btn--spinning hidden">
+				Spinning...
+			</button>
+		</div>
+		<div class="chances" data-aos="fade-in" data-aos-duration="500" data-aos-once="true">
+			<ul class="chances__list">
+				<li class="chances__list-item chances__list-item--red">
+					<img
+						src="./dist/img/anubis/eyeofhorus.png"
+						alt="M4A4 Eye of Horus"
+						class="chances__list-item-img"
+					/>
+					<p class="chances__list-item-text">1%</p>
+					<div class="chances__list-item-price hidden">
+						<p class="chances__list-item-price-text">2031</p>
+                        <img class="chances__list-item-price-icon" src="./dist/img/other/coin.png" alt="Coin Icon">
+					</div>
+				</li>
+				<li class="chances__list-item chances__list-item--pink">
+					<img
+						src="./dist/img/anubis/apep'scurse.png"
+						alt="P250 | Apep's Curse"
+						class="chances__list-item-img"
+					/>
+					<p class="chances__list-item-text">4.5%</p>
+					<div class="chances__list-item-price hidden">
+						<p class="chances__list-item-price-text">232</p>
+                        <img class="chances__list-item-price-icon" src="./dist/img/other/coin.png" alt="Coin Icon">
+					</div>
+				</li>
+				<li class="chances__list-item chances__list-item--pink">
+					<img
+						src="./dist/img/anubis/watersofnephthys.png"
+						alt="FAMAS | Waters of Nephthys"
+						class="chances__list-item-img"
+					/>
+					<p class="chances__list-item-text">4.5%</p>
+					<div class="chances__list-item-price hidden">
+						<p class="chances__list-item-price-text">156</p>
+                        <img class="chances__list-item-price-icon" src="./dist/img/other/coin.png" alt="Coin Icon">
+					</div>
+				</li>
+				<li class="chances__list-item chances__list-item--purple">
+					<img
+						src="./dist/img/anubis/ramese'sreach.png"
+						alt="Glock-18 | Ramese's Reach"
+						class="chances__list-item-img"
+					/>
+					<p class="chances__list-item-text">3.33%</p>
+					<div class="chances__list-item-price hidden">
+						<p class="chances__list-item-price-text">21</p>
+                        <img class="chances__list-item-price-icon" src="./dist/img/other/coin.png" alt="Coin Icon">
+					</div>
+				</li>
+				<li class="chances__list-item chances__list-item--purple">
+					<img
+						src="./dist/img/anubis/scarabrush.png"
+						alt="P90 | ScaraB Rush"
+						class="chances__list-item-img"
+					/>
+					<p class="chances__list-item-text">3.33%</p>
+					<div class="chances__list-item-price hidden">
+						<p class="chances__list-item-price-text">12</p>
+                        <img class="chances__list-item-price-icon" src="./dist/img/other/coin.png" alt="Coin Icon">
+					</div>
+				</li>
+				<li class="chances__list-item chances__list-item--purple">
+					<img
+						src="./dist/img/anubis/sobek'sbite.png"
+						alt="Nova | Sobek's Bite"
+						class="chances__list-item-img"
+					/>
+					<p class="chances__list-item-text">3.33%</p>
+					<div class="chances__list-item-price hidden">
+						<p class="chances__list-item-price-text">9</p>
+                        <img class="chances__list-item-price-icon" src="./dist/img/other/coin.png" alt="Coin Icon">
+					</div>
+				</li>
+				<li class="chances__list-item chances__list-item--blue">
+					<img
+						src="./dist/img/anubis/blacknile.png"
+						alt="AWP | Black Nile"
+						class="chances__list-item-img"
+					/>
+					<p class="chances__list-item-text">2.5%</p>
+					<div class="chances__list-item-price hidden">
+						<p class="chances__list-item-price-text">9</p>
+                        <img class="chances__list-item-price-icon" src="./dist/img/other/coin.png" alt="Coin Icon">
+					</div>
+				</li>
+				<li class="chances__list-item chances__list-item--blue">
+					<img
+						src="./dist/img/anubis/steeldelta.png"
+						alt="AK47 | Steel Delta"
+						class="chances__list-item-img"
+					/>
+					<p class="chances__list-item-text">2.5%</p>
+					<div class="chances__list-item-price hidden">
+						<p class="chances__list-item-price-text">4</p>
+                        <img class="chances__list-item-price-icon" src="./dist/img/other/coin.png" alt="Coin Icon">
+					</div>
+				</li>
+				<li class="chances__list-item chances__list-item--blue">
+					<img
+						src="./dist/img/anubis/mummy'srot.png"
+						alt="Tec-9 | Mummy's Rot"
+						class="chances__list-item-img"
+					/>
+					<p class="chances__list-item-text">2.5%</p>
+					<div class="chances__list-item-price hidden">
+						<p class="chances__list-item-price-text">2</p>
+                        <img class="chances__list-item-price-icon" src="./dist/img/other/coin.png" alt="Coin Icon">
+					</div>
+				</li>
+				<li class="chances__list-item chances__list-item--blue">
+					<img
+						src="./dist/img/anubis/coppercoated.png"
+						alt="MAG-7 | Copper Coated"
+						class="chances__list-item-img"
+					/>
+					<p class="chances__list-item-text">2.5%</p>
+					<div class="chances__list-item-price hidden">
+						<p class="chances__list-item-price-text">1</p>
+                        <img class="chances__list-item-price-icon" src="./dist/img/other/coin.png" alt="Coin Icon">
+					</div>
+				</li>
+				<li class="chances__list-item chances__list-item--lightblue">
+					<img
+						src="./dist/img/anubis/mudspec.png"
+						alt="M4A1-S | Mud-Spec"
+						class="chances__list-item-img"
+					/>
+					<p class="chances__list-item-text">5%</p>
+					<div class="chances__list-item-price hidden">
+						<p class="chances__list-item-price-text">0.9</p>
+                        <img class="chances__list-item-price-icon" src="./dist/img/other/coin.png" alt="Coin Icon">
+					</div>
+				</li>
+				<li class="chances__list-item chances__list-item--lightblue">
+					<img
+						src="./dist/img/anubis/deserttactical.png"
+						alt="USP-S | Desert Tactical"
+						class="chances__list-item-img"
+					/>
+					<p class="chances__list-item-text">5%</p>
+					<div class="chances__list-item-price hidden">
+						<p class="chances__list-item-price-text">0.8</p>
+                        <img class="chances__list-item-price-icon" src="./dist/img/other/coin.png" alt="Coin Icon">
+					</div>
+				</li>
+				<li class="chances__list-item chances__list-item--lightblue">
+					<img
+						src="./dist/img/anubis/azureglyph.png"
+						alt="SSG 08 | Azure Glyph"
+						class="chances__list-item-img"
+					/>
+					<p class="chances__list-item-text">5%</p>
+					<div class="chances__list-item-price hidden">
+						<p class="chances__list-item-price-text">0.6</p>
+                        <img class="chances__list-item-price-icon" src="./dist/img/other/coin.png" alt="Coin Icon">
+					</div>
+				</li>
+				<li class="chances__list-item chances__list-item--lightblue">
+					<img
+						src="./dist/img/anubis/echoingsands.png"
+						alt="MAC-10 | Echoing Sands"
+						class="chances__list-item-img"
+					/>
+					<p class="chances__list-item-text">5%</p>
+					<div class="chances__list-item-price hidden">
+						<p class="chances__list-item-price-text">0.7</p>
+                        <img class="chances__list-item-price-icon" src="./dist/img/other/coin.png" alt="Coin Icon">
+					</div>
+				</li>
+				<li class="chances__list-item chances__list-item--grey">
+					<img
+						src="./dist/img/anubis/hieroglyph.png"
+						alt="XM1014 | Hieroglyph"
+						class="chances__list-item-img"
+					/>
+					<p class="chances__list-item-text">8%</p>
+					<div class="chances__list-item-price hidden">
+						<p class="chances__list-item-price-text">0.12</p>
+                        <img class="chances__list-item-price-icon" src="./dist/img/other/coin.png" alt="Coin Icon">
+					</div>
+				</li>
+				<li class="chances__list-item chances__list-item--grey">
+					<img
+						src="./dist/img/anubis/snakepit.png"
+						alt="AUG | Snake Pit"
+						class="chances__list-item-img"
+					/>
+					<p class="chances__list-item-text">8%</p>
+					<div class="chances__list-item-price hidden">
+						<p class="chances__list-item-price-text">0.15</p>
+                        <img class="chances__list-item-price-icon" src="./dist/img/other/coin.png" alt="Coin Icon">
+					</div>
+				</li>
+				<li class="chances__list-item chances__list-item--grey">
+					<img
+						src="./dist/img/anubis/submerged.png"
+						alt="M249 | Submerged"
+						class="chances__list-item-img"
+					/>
+					<p class="chances__list-item-text">8%</p>
+					<div class="chances__list-item-price hidden">
+						<p class="chances__list-item-price-text">0.2</p>
+                        <img class="chances__list-item-price-icon" src="./dist/img/other/coin.png" alt="Coin Icon">
+					</div>
+				</li>
+				<li class="chances__list-item chances__list-item--grey">
+					<img
+						src="./dist/img/anubis/sunbaked.png"
+						alt="MP7 | Sunbaked"
+						class="chances__list-item-img"
+					/>
+					<p class="chances__list-item-text">8%</p>
+					<div class="chances__list-item-price hidden">
+						<p class="chances__list-item-price-text">0.14</p>
+                        <img class="chances__list-item-price-icon" src="./dist/img/other/coin.png" alt="Coin Icon">
+					</div>
+				</li>
+				<li class="chances__list-item chances__list-item--grey">
+					<img
+						src="./dist/img/anubis/inlay.png"
+						alt="R8 Revolver | Inlay"
+						class="chances__list-item-img"
+					/>
+					<p class="chances__list-item-text">8%</p>
+					<div class="chances__list-item-price hidden">
+						<p class="chances__list-item-price-text">0.11</p>
+                        <img class="chances__list-item-price-icon" src="./dist/img/other/coin.png" alt="Coin Icon">
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="main">
+			<aside class="main__drops" data-aos="fade-in" data-aos-duration="500">
+				<div class="main__top">
+					<p class="main__top-text">Last Drops</p>
+				</div>
+				<div class="main__dropsbox">
+				</div>
+			</aside>
+		</div>
+		<div class="main-chat">
+			<aside class="main-chat__chatbox" data-aos="fade-in" data-aos-duration="500">
+				<div class="main-chat__messages">
+				</div>
+				<div class="main-chat__inputbox">
+					<input type="text" class="main-chat__input" placeholder="Send msg...">
+					<button class="main-chat__button">Send</button>
+				</div>
+			</aside>
+		</div>
+		<!-- @include "footer.kit" -->
+		<script src="./dist/js/caseanubis.min.js"></script>
+		<script src="./dist/js/footeryear.min.js"></script>
+		<script src="./dist/js/casechances.min.js"></script>
+		<script src="./dist/js/nav.min.js"></script>
+		<script src="./dist/js/setbalance.min.js"></script>
+		<script src="./dist/js/lastdrops.min.js"></script>
+		<script src="./dist/js/chat.min.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		  </script>
+	</body>
+</html>

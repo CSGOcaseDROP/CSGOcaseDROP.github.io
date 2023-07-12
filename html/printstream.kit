@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- @include "meta.kit" -->
+		<title>CSGOLuck | Printstream Case</title>
+		<!-- @include "link.kit" -->
+	</head>
+	<body>
+		<!-- @include "nav.kit" -->
+		<div class="main">
+			<aside class="main__drops" data-aos="fade-in" data-aos-duration="500" data-aos-once="true">
+				<div class="main__top">
+					<p class="main__top-text">Last Drops</p>
+				</div>
+				<div class="main__dropsbox">
+				</div>
+			</aside>
+		</div>
+		<div class="casebox" data-aos="fade-in" data-aos-duration="500">
+			<div class="casebox__caseimg">
+				<img
+					class="casebox__caseimg-img"
+					src="./dist/img/printstream/case.png"
+					alt="Printstream Case"
+				/>
+			</div>
+			<div class="casebox-arrows">
+				<div class="casebox-arrows-arrow casebox-arrows-arrow--down">
+					<i class="casebox-arrow-down-icon fa-solid fa-arrow-down"></i>
+				</div>
+				<div class="casebox-arrows-arrow casebox-arrows-arrow--up">
+					<i class="casebox-arrow-up-icon fa-solid fa-arrow-up"></i>
+				</div>
+			</div>
+			<ul class="case"></ul>
+		</div>
+		<div class="open-btn-box" data-aos="fade-in" data-aos-duration="500" data-aos-once="true">
+			<button class="open-btn">
+				open
+				<img
+					class="open-btn-icon"
+					src="./dist/img/other/coin.png"
+					alt="Coin Icon"
+				/>
+				<p class="open-btn-amount">20.00</p>
+			</button>
+			<button class="open-btn open-btn--spinning hidden">
+				Spinning...
+			</button>
+		</div>
+		<div class="chances" data-aos="fade-in" data-aos-duration="500" data-aos-once="true">
+			<ul class="chances__list">
+				<li class="chances__list-item chances__list-item--red">
+					<img
+						src="./dist/img/printstream/m4a1-sprintstream.png"
+						alt="M4A1-S Printstream"
+						class="chances__list-item-img"
+					/>
+					<p class="chances__list-item-text">5%</p>
+					<div class="chances__list-item-price hidden">
+						<p class="chances__list-item-price-text">451</p>
+                        <img class="chances__list-item-price-icon" src="./dist/img/other/coin.png" alt="Coin Icon">
+					</div>
+				</li>
+				<li class="chances__list-item
+				chances__list-item--pink">
+					<img
+						src="./dist/img/printstream/uspprintstream.png"
+						alt="USP-S Printstream"
+						class="chances__list-item-img"
+					/>
+					<p class="chances__list-item-text">12.5%</p>
+					<div class="chances__list-item-price hidden">
+						<p class="chances__list-item-price-text">120</p>
+                        <img class="chances__list-item-price-icon" src="./dist/img/other/coin.png" alt="Coin Icon">
+					</div>
+				</li>
+				<li class="chances__list-item
+				chances__list-item--pink">
+					<img
+						src="./dist/img/printstream/deserteagleprintstream.png"
+						alt="Desert Eagle Printstream"
+						class="chances__list-item-img"
+					/>
+					<p class="chances__list-item-text">12.5%</p>
+					<div class="chances__list-item-price hidden">
+						<p class="chances__list-item-price-text">87</p>
+                        <img class="chances__list-item-price-icon" src="./dist/img/other/coin.png" alt="Coin Icon">
+					</div>
+				</li>
+				<li class="chances__list-item
+				chances__list-item--grey">
+					<img
+						src="./dist/img/printstream/cz-75-autojungledashed.png"
+						alt="CZ-75 Auto Jungle Dashed"
+						class="chances__list-item-img"
+					/>
+					<p class="chances__list-item-text">70%</p>
+					<div class="chances__list-item-price hidden">
+						<p class="chances__list-item-price-text">0.5</p>
+                        <img class="chances__list-item-price-icon" src="./dist/img/other/coin.png" alt="Coin Icon">
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="main-chat">
+			<aside class="main-chat__chatbox" data-aos="fade-in" data-aos-duration="500">
+				<div class="main-chat__messages">
+				</div>
+				<div class="main-chat__inputbox">
+					<input type="text" class="main-chat__input" placeholder="Send msg...">
+					<button class="main-chat__button">Send</button>
+				</div>
+			</aside>
+		</div>
+		<!-- @include "footer.kit" -->
+		<script src="./dist/js/caseprintstream.min.js"></script>
+		<script src="./dist/js/casechances.min.js"></script>
+		<script src="./dist/js/footeryear.min.js"></script>
+		<script src="./dist/js/setbalance.min.js"></script>
+		<script src="./dist/js/nav.min.js"></script>
+		<script src="./dist/js/lastdrops.min.js"></script>
+		<script src="./dist/js/chat.min.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		  </script>
+	</body>
+</html>
