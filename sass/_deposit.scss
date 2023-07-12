@@ -1,0 +1,82 @@
+@use "./colors" as *;
+
+.main-dep {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 70vh;
+
+	&__top {
+		display: flex;
+		justify-content: space-around;
+		width: 75%;
+		padding-bottom: 5em;
+		color: $white-text;
+
+		&-text {
+			font-size: 2.4rem;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+
+		&-button {
+			padding: 1em;
+			border: none;
+			border-radius: 5px;
+			background-color: $green-button;
+			cursor: pointer;
+			transition: background-color 0.3s, transform 0.3s;
+
+			&:hover {
+				background-color: $green-button-hover;
+				transform: scale(1.1);
+			}
+
+			&-icon {
+				color: $white-text;
+				font-size: 2rem;
+			}
+		}
+	}
+
+	&__middle {
+		&-label {
+			font-size: 2.2rem;
+			color: $white-text;
+		}
+
+		&-input {
+			margin: 0 0.5em;
+			padding: 0.2em 0.4em;
+			font-size: 2rem;
+			border: 2px solid $green-button;
+			border-radius: 10px;
+			outline: none;
+			color: $white-text;
+			background-color: $darker-black;
+			transition: background-color 0.3s;
+
+			&:focus,
+			&:hover {
+				border: 2px solid $green-button-hover;
+			}
+		}
+
+		&-deposit {
+			padding: 0.2em 0.4em;
+			font-size: 2rem;
+			text-transform: uppercase;
+			border: none;
+			border-radius: 5px;
+			color: $white-text;
+			background-color: $green-button;
+			cursor: pointer;
+			transition: background-color 0.3s;
+
+			&:hover {
+				background-color: $green-button-hover;
+			}
+		}
+	}
+}

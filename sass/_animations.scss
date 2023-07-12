@@ -1,0 +1,105 @@
+@use "./colors" as *;
+
+@keyframes open {
+	from {
+		left: 50%;
+	}
+
+	to {
+		left: -225%;
+	}
+}
+
+@keyframes timer {
+	0% {
+		width: 100%;
+		background-color: green;
+	}
+
+	75% {
+		width: 25%;
+		background-color: orange;
+	}
+
+	90% {
+		width: 10%;
+		background-color: red;
+	}
+
+	100% {
+		width: 0%;
+		background-color: red;
+	}
+}
+
+@keyframes timer-time {
+	0% {
+		color: green;
+	}
+
+	75% {
+		color: orange;
+	}
+
+	90% {
+		color: red;
+	}
+
+	100% {
+		color: red;
+	}
+}
+
+@keyframes show {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes hide {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes coinflip-red {
+	from {
+		transform: rotateY(0deg);
+	} 
+
+	to {
+		transform: rotateY(-1440deg);
+	}
+}
+
+@keyframes coinflip-black {
+	from {
+		transform: rotateY(-90deg);
+	} 
+
+	to {
+		transform: rotateY(-1600deg);
+	}
+}
+
+@keyframes light {
+	0% {
+		opacity: 0;
+	} 
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}

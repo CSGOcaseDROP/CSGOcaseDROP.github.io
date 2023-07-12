@@ -1,0 +1,360 @@
+@use "./colors" as *;
+
+.main-roulette {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+
+	&__inputbox {
+		display: flex;
+		justify-content: space-between;
+		margin: 2em 0;
+		padding: 0.5em;
+		border-radius: 8px;
+		background-color: $darker-black;
+
+		&-input {
+			width: 100%;
+			font-size: 1.8rem;
+			border: 1px solid $darker-black;
+			color: $white-text;
+			background-color: $darker-black;
+			outline: none;
+		}
+
+		&-button {
+			display: none;
+			padding: 0.25em 0.5em;
+			margin: 0 0.5em;
+			border: 1px solid $darker-black;
+			border-radius: 10px;
+			text-transform: uppercase;
+			font-weight: bold;
+			color: $white-text;
+			background-color: $lighter-black;
+			cursor: pointer;
+			transition: transform 0.3s;
+
+			&:hover {
+				transform: translateY(-2px);
+			}
+
+			&--clear {
+				background: none;
+
+				&:hover {
+					transform: translateY(0);
+				}
+			}
+		}
+	}
+
+	&__countdown {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		color: $white-text;
+		font-size: 2rem;
+
+		&-timer {
+			margin-bottom: 1em;
+			font-weight: bold;
+			animation: timer-time 15s linear infinite;
+		}
+
+		&-timerline {
+			position: relative;
+			width: 100%;
+			height: 4px;
+			border-radius: 15px;
+			background-color: $timer-line-bg;
+
+			&::before {
+				position: absolute;
+				left: 0;
+				top: 0;
+				content: "";
+				height: 4px;
+				width: 100%;
+				background-color: green;
+				animation: timer 15s linear infinite;
+			}
+		}
+	}
+
+	&__betbuttons {
+		display: flex;
+
+		&-box {
+			width: 300px;
+		}
+
+		&-players {
+			&-player {
+				display: flex;
+				justify-content: space-between;
+				padding: 0.25em 0;
+				color: $white-text;
+
+				&-amount {
+					display: flex;
+					align-items: center;
+
+					&-img {
+						margin: 0 0.2em;
+						width: 25px;
+						height: 25px;
+					}
+				}
+			}
+		}
+
+		&-betsamount {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 1em 0;
+			color: $white-text;
+
+			&-textvalue {
+				font-size: 2rem;
+			}
+
+			&-coinsvalue {
+				display: flex;
+				align-items: center;
+			}
+		}
+
+		&-button {
+			width: 100%;
+			padding: 0.5em 0;
+			font-size: 2rem;
+			font-weight: bold;
+			border: none;
+			color: $white-text;
+			background-color: $green-button;
+			box-shadow: 0px 0px 10px $green-button;
+			cursor: pointer;
+			transition: background-color 0.3s, transform 0.3s;
+
+			&:hover {
+				background-color: $green-button-hover;
+				transform: translateY(-2px);
+			}
+
+			&--red {
+				background-color: $red;
+				box-shadow: 0px 0px 10px $red;
+
+				&:hover {
+					background-color: $red-hover;
+				}
+			}
+
+			&--black {
+				background-color: $lighter-black;
+				box-shadow: 0px 0px 10px $black-button-roulette;
+
+				&:hover {
+					background-color: $black-button-roulette-hover;
+				}
+			}
+		}
+
+		&-betsamount {
+			&-coinsvalue {
+				&-img {
+					width: 40px;
+					height: 40px;
+				}
+			}
+		}
+
+		&-top {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0.6em 0;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			background-color: $darker-black;
+
+			&-imgbox {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 0 0.5em;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+
+				&--red {
+					background-color: $red;
+				}
+
+				&--black {
+					background-color: $lighter-black;
+				}
+
+				&--green {
+					background-color: $green-button;
+				}
+
+				&-img {
+					width: 40px;
+					height: 40px;
+				}
+			}
+
+			&-text {
+				font-size: 1.8rem;
+				font-weight: bold;
+				color: $white-text;
+			}
+		}
+	}
+
+	&__betbox {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+
+		&-bet {
+			padding: 0.4em;
+			margin: 0 0.2em;
+			height: 80px;
+			width: 80px;
+			border-radius: 50%;
+			cursor: pointer;
+
+			&--red {
+				background-color: $red;
+			}
+
+			&--black {
+				background-color: $lighter-black;
+			}
+
+			&--green {
+				background-color: $green-button;
+			}
+
+			&-img {
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
+
+	&__arrow {
+		position: absolute;
+		left: 50%;
+		top: 260px;
+		width: 3px;
+		height: 135px;
+		transform: translate(-50%);
+		background-color: $white-text;
+		z-index: 1000;
+		opacity: 0;
+
+		&-up {
+			position: absolute;
+			left: 50%;
+			top: 200px;
+		}
+
+		&-down {
+			position: absolute;
+			left: 50%;
+			top: 365px;
+		}
+
+		&-up,
+		&-down {
+			transform: translate(-50%);
+			font-size: 3rem;
+			color: black;
+		}
+	}
+
+	&__list {
+		margin: 4em 0;
+		list-style: none;
+
+		&-box {
+			display: flex;
+		}
+
+		&-item {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 4.13em;
+			color: $white-text;
+			width: 132px;
+			height: 136px;
+
+			&-img {
+				width: 50px;
+			}
+
+			&--red {
+				background-color: $red;
+				box-shadow: 0px 0px 10px $red;
+			}
+
+			&--black {
+				background-color: $lighter-black;
+				box-shadow: 0px 0px 10px $black-button-roulette;
+			}
+
+			&--green {
+				background-color: $green-button;
+				box-shadow: 0px 0px 10px $green-button;
+			}
+		}
+	}
+
+	&__lastdrops {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		margin-top: 2em;
+		width: 280px;
+		height: 40px;
+		border-radius: 10px;
+		overflow: hidden;
+		background-color: $darker-black;
+
+		&-item {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0 0.2em;
+			height: 25px;
+			width:25px;
+			border-radius: 50%;
+
+			&-img {
+				width: 80%;
+				height: 80%;
+			}
+
+			&--red {
+				background-color: $red;
+			}
+
+			&--black {
+				background-color: $lighter-black;
+			}
+
+			&--green {
+				background-color: $green-button;
+			}
+		}
+	}
+}

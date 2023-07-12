@@ -1,0 +1,96 @@
+@use "./colors" as *;
+
+.main-cases {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+
+	&__list {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		list-style: none;
+
+		&-item {
+			display: flex;
+			flex-direction: column;
+			padding: 1em;
+			margin: 0.5em;
+			background-color: $main-item-color;
+
+			&-name,
+			&-price {
+				font-weight: bold;
+				text-transform: uppercase;
+				color: $white-text;
+			}
+
+			&-name {
+				padding: 0.35em 0;
+				text-align: center;
+			}
+
+			&-price {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin: 0.5em auto;
+				padding: 0.5em;
+				border-radius: 50px;
+				color: $green-button;
+				background-color: $cases-price;
+
+				&-img {
+					margin: 0 0.15em;
+					width: 20px;
+					height: 20px;
+				}
+			}
+
+			&-photo {
+				max-width: 100%;
+				max-height: 100%;
+
+				&--item {
+					transform: scale(0.85);
+					transition: transform 0.3s;
+
+					&:hover {
+						transform: scale(1);
+					}
+				}
+			}
+
+			&-button {
+				padding: 0.5em;
+				font-size: 2rem;
+				font-weight: bold;
+				text-transform: uppercase;
+				border: none;
+				border-radius: 15px;
+				text-align: center;
+				text-decoration: none;
+				background-color: $green-button;
+				color: $white-text;
+				transition: background-color 0.3s;
+				cursor: pointer;
+
+				&:hover {
+					background-color: $green-button-hover;
+				}
+			}
+		}
+	}
+}
+
+.images {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 250px;
+	width: 250px;
+	z-index: 0;
+}

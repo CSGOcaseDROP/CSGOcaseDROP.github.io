@@ -1,0 +1,130 @@
+@use "./colors" as *;
+
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: $darker-black;
+	text-transform: uppercase;
+	color: $white-text;
+	font-weight: bold;
+
+	&__list {
+		display: flex;
+		align-items: center;
+		list-style: none;
+
+		&-item {
+			padding: 1em;
+
+			&--hiddenonphone {
+				display: none;
+			}
+
+			&-balance {
+				display: flex;
+				align-items: center;
+				padding: 0.4em;
+				border-radius: 4px;
+
+				&-icon {
+					width: 40px;
+					margin: 0 0.5em;
+				}
+			}
+
+			&-link {
+				position: relative;
+				text-decoration: none;
+				color: $nav-link-color;
+				transition: color 0.3s;
+
+				&--color:hover {
+					color: $white-text;
+				}
+
+				&-text-green {
+					color: $darker-green;
+				}
+
+				&--logo {
+					display: flex;
+					align-items: center;
+				}
+
+				&--underline {
+					&::before {
+						content: "";
+						position: absolute;
+						bottom: -5px;
+						height: 2px;
+						width: 0px;
+						background-color: $darker-green;
+						transition: width 0.3s;
+					}
+
+					&:hover::before {
+						width: 100%;
+					}
+				}
+
+				&-logo {
+					margin: 0 0.5em;
+					width: 50px;
+				}
+
+				&--deposit {
+					padding: 1em;
+					background-color: $green-button;
+					border-radius: 10px;
+					color: $white-text;
+					transition: all 0.3s;
+
+					&:hover {
+						background-color: $green-button-hover;
+					}
+				}
+			}
+		}
+	}
+
+	&__list-mobile {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		list-style-type: none;
+		background-color: $darker-black;
+		z-index: 100000;
+	}
+
+	&__item-mobile {
+		padding: 0.5em 0;
+		font-size: 2.4rem;
+	}
+
+	&__link-mobile {
+		text-decoration: none;
+		color: $white-text;
+	}
+
+	&__balance {
+		display: flex;
+		align-items: center;
+
+		&-img {
+			width: 40px;
+			height: 40px;
+		}
+	}
+}

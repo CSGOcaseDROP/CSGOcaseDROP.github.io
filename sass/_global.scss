@@ -1,0 +1,99 @@
+@use "./colors" as *;
+
+body::-webkit-scrollbar-track {
+	background-color: $darker-black;
+}
+
+body::-webkit-scrollbar {
+	width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: $green-button;
+}
+
+.hidden {
+	display: none;
+}
+
+.open-anim {
+	animation: open 5s forwards;
+}
+
+.spin {
+	transition: transform 5s cubic-bezier(0, 0, 0, 0.99);
+}
+
+.bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: -1;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1200px;
+	width: 100%;
+}
+
+main {
+	padding: 6em 0 4em 0;
+}
+
+.linethrough {
+	text-decoration: line-through;
+}
+
+.small {
+	display: none;
+}
+
+.above {
+	z-index: 110000;
+}
+
+.body-hidden {
+	overflow-y: hidden;
+}
+
+.hide {
+	animation: hide 0.3s linear;
+}
+
+.show {
+	animation: show 0.3s linear;
+}
+
+.coinflip-red {
+	animation: coinflip-red 5s;
+}
+
+.coinflip-black {
+	animation: coinflip-black 5s;
+}
+
+.crash-time-text-start {
+	animation: timer-time 15s linear infinite;
+}
+
+.crash-time-line-start {
+	animation: timer 15s linear infinite;
+}
+
+.win {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	font-size: 2rem;
+	font-weight: bold;
+	color: $green-button;
+
+	&__img {
+		width: 25px;
+		height: 25px;
+	}
+}

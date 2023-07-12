@@ -1,0 +1,229 @@
+@use "./colors" as *;
+
+.casebox {
+	position: relative;
+	height: 250px;
+	margin: 8em auto;
+	max-width: 1200px;
+	width: 100%;
+	border: 2px solid $green-button;
+	border-radius: 100px;
+	overflow: hidden;
+
+	&__caseimg {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+
+		&-img {
+			width: 350px;
+		}
+	}
+
+	&-arrows {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%);
+		height: 100%;
+		z-index: 1;
+
+		&-arrow {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 50px;
+			height: 50px;
+			border: 2px solid $green-button;
+			border-radius: 50%;
+			color: $green-button;
+			background-color: rgba(0, 0, 0, 0.6);
+		}
+	}
+}
+
+.case {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	width: 400%;
+	left: 50%;
+	background-color: black;
+
+	&-item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 250px;
+
+		&-img {
+			width: 90%;
+		}
+
+		&-name {
+			font-weight: bold;
+			font-size: 2rem;
+			padding-bottom: 0.5em;
+			color: $white-text;
+		}
+	}
+}
+
+.open-btn {
+	display: flex;
+	align-items: center;
+	padding: 0.5em 2em;
+	font-size: 2rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 15px;
+	background-color: $green-button;
+	color: $white-text;
+	cursor: pointer;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background-color: $green-button-hover;
+	}
+
+	&--spinning {
+		cursor: default;
+		padding: 0.75em 2.5em;
+		background-color: $green-button-hover;
+	}
+
+	&-icon {
+		margin: 0 0.2em 0 0.5em;
+		width: 35px;
+		height: 35px;
+	}
+
+	&-box {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.chances {
+	display: flex;
+	justify-content: center;
+	padding: 2em 0 2em 0;
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+
+	&__list {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		list-style: none;
+		border: 2px solid $green-button;
+		border-radius: 25px;
+		background-color: $darker-black;
+		overflow: hidden;
+
+		&-item {
+			position: relative;
+			width: 50%;
+			border: 1px solid black;
+
+			&-price {
+				position: absolute;
+				top: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				height: 100%;
+				background: rgb(0, 0, 0, 0.8);
+				opacity: 0;
+				transition: opacity 0.3s;
+
+				&:hover {
+					opacity: 1;
+				}
+
+				&-text {
+					font-size: 2rem;
+					color: $white-text;
+				}
+
+				&-icon {
+					width: 35px;
+				}
+			}
+
+			&--gold {
+				background: linear-gradient(
+					180deg,
+					$darker-black 40%,
+					rgba(255, 248, 0, 0.5) 100%
+				);
+			}
+
+			&--red {
+				background: linear-gradient(
+					180deg,
+					$darker-black 40%,
+					rgba(135, 0, 0, 0.5) 100%
+				);
+			}
+
+			&--pink {
+				background: linear-gradient(
+					180deg,
+					$darker-black 40%,
+					rgba(255, 50, 240, 0.5) 100%
+				);
+			}
+
+			&--purple {
+				background: linear-gradient(
+					180deg,
+					$darker-black 40%,
+					rgba(125, 50, 255, 0.5) 100%
+				);
+			}
+
+			&--lightblue {
+				background: linear-gradient(
+					180deg,
+					$darker-black 40%,
+					rgba(160, 211, 255, 0.5) 100%
+				);
+			}
+
+			&--blue {
+				background: linear-gradient(
+					180deg,
+					$darker-black 40%,
+					rgba(50, 113, 255, 0.5) 100%
+				);
+			}
+
+			&--grey {
+				background: linear-gradient(
+					180deg,
+					$darker-black 40%,
+					rgba(78, 78, 78, 0.5) 100%
+				);
+			}
+
+			&-img {
+				width: 100%;
+			}
+
+			&-text {
+				font-size: 2rem;
+				text-align: center;
+				color: $white-text;
+			}
+		}
+	}
+}
